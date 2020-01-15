@@ -15,7 +15,7 @@ Flask App deployed on Heroku
 
 ### Usage
 
-Send a text message to the phone number: <need to add> in the following format
+Send a text message to the phone number: XXX-XXX-XXXX in the following format
   
 ```
 startlocation endlocation
