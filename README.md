@@ -1,6 +1,6 @@
 # textDirect
 
-In several countries, including India, certain socioeconomic strata of people lack financial resources to purchase smart phones with GPS applications. 
+In several countries developing countries, certain socioeconomic strata of people lack financial resources to purchase smart phones with GPS applications. 
 However, most users have phones equipped with text messaging capabilities. textDirect delivers step by step directions via SMS.
 
 
