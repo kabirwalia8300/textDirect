@@ -2,7 +2,7 @@ from flask import Flask, request
 from twilio.twiml.messaging_response import Message, MessagingResponse
 import direct
 import os
-import xml.etree.ElementTree
+import re
 
 app = Flask(__name__)
 port = int(os.environ.get("PORT", 5000))
@@ -20,7 +20,7 @@ def sms():
     directions = direct.sendInstructions(start, end, api_key)
     result = 'Hello! Here are your directions: '
     for x in range(len(directions)):
-        result = result + '\n' + str(x+1) + '. ' + remove_tags(directions[x])
+        result = result + '\n' + str(x+1) + '. ' + cleanhtml(directions[x])
 
 
     resp = MessagingResponse()
@@ -28,8 +28,10 @@ def sms():
     resp.message(result)
     return str(resp)
 
-def remove_tags(text):
-    return ''.join(xml.etree.ElementTree.fromstring(text).itertext())
+def cleanhtml(raw_html):
+  cleanr = re.compile('<.*?>')
+  cleantext = re.sub(cleanr, '', raw_html)
+  return cleantext
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0',port=port, debug=True)
