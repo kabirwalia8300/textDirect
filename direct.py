@@ -1,11 +1,12 @@
 import urllib.request
 import json
 
+
 endpoint = 'https://maps.googleapis.com/maps/api/directions/json?'
-api_key = ''
 
 
-def sendInstructions(origin, destination):
+
+def sendInstructions(origin, destination, api_key):
 
     orig = origin.replace(' ','+')
     dest = destination.replace(' ','+')
