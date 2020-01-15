@@ -12,3 +12,13 @@ However, most users have phones equipped with text messaging capabilities. textD
 - Flask
 
 Flask App deployed on Heroku
+
+### Usage
+
+Send a text message to the phone number: <need to add> in the following format
+  
+```
+startlocation endlocation
+```
+
+You will then receive a reply within a few seconds with step by step instructions.
