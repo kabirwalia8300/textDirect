@@ -1,10 +1,7 @@
 import urllib.request
 import json
 
-
 endpoint = 'https://maps.googleapis.com/maps/api/directions/json?'
-
-
 
 def sendInstructions(origin, destination, api_key):
 
@@ -15,10 +12,10 @@ def sendInstructions(origin, destination, api_key):
     response = urllib.request.urlopen(request).read()
     directions=  json.loads(response)
     #print(directions)
-    routes = directions['routes']
-    legs = routes[0]['legs']
-    steps= legs[0]['steps']
-    length = len(steps)
+    #routes = directions['routes']
+    #legs = routes[0]['legs']
+    #steps= legs[0]['steps']
+    steps = directions['routes'][0]['legs'][0]['steps']
     instructions = []
     for x in steps:
         instructions.append(x['html_instructions'])

@@ -11,17 +11,17 @@ api_key=os.getenv('API_KEY')
 @app.route('/sms', methods=['GET','POST'])
 def sms():
 
-    message_body = request.form['Body']
-    assert message_body.count(' ')==1
-    index=message_body.find(' ')
-    start=message_body[:index]
-    end=message_body[index+1:]
+    querry_message = request.form['Body']
+    assert querry_message.count(' ')==1
+    index=querry_message.find(' ')
+    start=querry_message[:index]
+    end=querry_message[index+1:]
 
     directions = direct.sendInstructions(start, end, api_key)
+    
     result = 'Hello! Here are your directions: '
     for x in range(len(directions)):
         result = result + '\n' + str(x+1) + '. ' + cleanhtml(directions[x])
-
 
     resp = MessagingResponse()
 
@@ -36,5 +36,5 @@ def cleanhtml(raw_html):
 if __name__ == '__main__':
     app.run(host='0.0.0.0',port=port, debug=True)
 
-#see how to clean html
+
 # send multiple text messages when character limit exceeded
