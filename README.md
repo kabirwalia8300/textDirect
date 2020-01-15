@@ -11,3 +11,4 @@ However, most users have phones equipped with text messaging capabilities. textD
 - twillio API (Python)
 - Flask
 
+Future plans to migrate from ngrok based local server to heroku.
