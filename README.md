@@ -1,6 +1,6 @@
 # textDirect
 
-In several countries, including India, certain socioeconomic strata of people lack financial resources to purchase smart phones with GPS applications. 
+In several countries developing countries, certain socioeconomic strata of people lack financial resources to purchase smart phones with GPS applications. 
 However, most users have phones equipped with text messaging capabilities. textDirect delivers step by step directions via SMS.
 
 
@@ -11,4 +11,14 @@ However, most users have phones equipped with text messaging capabilities. textD
 - twillio API (Python)
 - Flask
 
-Future plans to migrate from ngrok based local server to heroku.
+Flask App deployed on Heroku
+
+### Usage
+
+Send a text message to the phone number: XXX-XXX-XXXX in the following format
+  
+```
+startlocation endlocation
+```
+
+You will then receive a reply within a few seconds with step by step instructions.
