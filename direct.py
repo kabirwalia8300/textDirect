@@ -2,7 +2,7 @@ import urllib.request
 import json
 
 endpoint = 'https://maps.googleapis.com/maps/api/directions/json?'
-api_key = 'AIzaSyCykBl-DK7iqVeUVtSQrvs2Ggxv_HnPmKA'
+api_key = ''
 
 
 def sendInstructions(origin, destination):
@@ -24,8 +24,14 @@ def sendInstructions(origin, destination):
 
     return instructions
 
-def printInstructions(orig,des):
-    print(sendInstructions(orig, des ))
+def printInstructions():
+    start = input('where are you: ').replace(' ','+')
+    end = input('where do you want to go: ').replace(' ','+')
+    directions = sendInstructions(start, end)
+    result = 'Hello! Here are your directions: '
+    for x in range(len(directions)):
+        result = result + '\n' + str(x+1) + '. ' + directions[x]
+    print(result)
 
 if __name__=="__main__":
-    printInstructions(orig,des)
+    printInstructions()
