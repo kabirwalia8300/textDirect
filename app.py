@@ -5,9 +5,9 @@ import os
 
 app = Flask(__name__)
 port = int(os.environ.get("PORT", 5000))
-api_key=os.environ.get('api_key', None)
+api_key=os.getenv('API_KEY')
 
-@app.route('/', methods=['GET','POST'])
+@app.route('/sms', methods=['GET','POST'])
 def sms():
 
     message_body = request.form['Body']

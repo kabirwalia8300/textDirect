@@ -28,7 +28,8 @@ def sendInstructions(origin, destination, api_key):
 def printInstructions():
     start = input('where are you: ').replace(' ','+')
     end = input('where do you want to go: ').replace(' ','+')
-    directions = sendInstructions(start, end)
+    api_key= input('key: ').replace(' ','+')
+    directions = sendInstructions(start, end, api_key)
     result = 'Hello! Here are your directions: '
     for x in range(len(directions)):
         result = result + '\n' + str(x+1) + '. ' + directions[x]
