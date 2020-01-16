@@ -4,11 +4,13 @@ import re
 
 endpoint = 'https://maps.googleapis.com/maps/api/directions/json?'
 
-def sendInstructions(origin, destination, api_key):
+def sendInstructions(origin, destination, api_key, lang, travelMode):
 
     orig = origin.replace(' ','+')
     dest = destination.replace(' ','+')
-    nav_request = 'origin={}&destination={}&key={}'.format(orig, dest, api_key)
+    lng = lang.replace(' ','+')
+    travel = travelMode.replace(' ','+')
+    nav_request = 'origin={}&destination={}&key={}&language={}&mode={}'.format(orig, dest, api_key, lng, travel)
     request = endpoint+nav_request
     response = urllib.request.urlopen(request).read()
     directions=  json.loads(response)
