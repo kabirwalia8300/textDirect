@@ -21,4 +21,7 @@ Send a text message to the phone number: XXX-XXX-XXXX in the following format
 startlocation endlocation
 ```
 
-You will then receive a reply within a few seconds with step by step instructions.
+You will then receive a reply within a few seconds with step by step instructions. 
+(Will soon add language and travel mode ability)
+
+
