@@ -18,14 +18,22 @@ def sms():
     end=querry_message[index+1:]
 
     directions = direct.sendInstructions(start, end, api_key)
-    
+    resp = MessagingResponse()
+    isMultiple=False
+
     result = 'Hello! Here are your directions: '
     for x in range(len(directions)):
-        result = result + '\n' + str(x+1) + '. ' + cleanhtml(directions[x])
+        result = result + '\n' + '#' + cleanhtml(directions[x])
+        if len(result)>1600:
+            isMultiple=True
+            pos = result.rfind('#',0,1601)
+            text = result[0:pos]
+            resp.message(text)
+            result= result[pos:]
 
-    resp = MessagingResponse()
+    if not isMultiple:
+        resp.message(result)
 
-    resp.message(result)
     return str(resp)
 
 def cleanhtml(raw_html):
