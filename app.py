@@ -4,9 +4,11 @@ import direct
 import os
 import re
 
+SECRET_KEY = 'tester'
 app = Flask(__name__)
 port = int(os.environ.get("PORT", 5000))
 api_key=os.getenv('API_KEY')
+app.config.from_object(__name__)
 
 @app.route('/sms', methods=['GET','POST'])
 def sms():
