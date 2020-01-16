@@ -16,7 +16,7 @@ def sms():
     counter += 1
     # Save the new counter value in the session
     session['counter'] = counter
-
+    resp = MessagingResponse()
     if counter == 1:
         resp.message('Hello! Welcome to textDirect!'+' Please use the following '
         +'format to send your request: address of origin*address of destination*'
@@ -36,7 +36,6 @@ def sms():
             travelMode=querry_message[ind_3+1: length]
 
             directions = direct.sendInstructions(start, end, api_key, lang, travelMode)
-            resp = MessagingResponse()
             isMultiple=False
 
             result = 'Hello! Here are your directions: '
