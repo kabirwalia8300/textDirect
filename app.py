@@ -17,14 +17,16 @@ def sms():
     # Save the new counter value in the session
     session['counter'] = counter
     resp = MessagingResponse()
-    if counter == 1:
+    querry_message = request.form['Body']
+
+    if querry_message.trim().equalsIgnoreCase('textDirect'):
         resp.message('Hello! Welcome to textDirect!'+' Please use the following '
         +'format to send your request: address of origin*address of destination*'
         +'language*mode of transport')
         return str(resp)
+
     else:
         try:
-            querry_message = request.form['Body']
             querry_message.trim()
             length = len(querry_message)
             assert querry_message.count('*')==3
