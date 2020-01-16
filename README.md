@@ -11,7 +11,7 @@ However, most users have phones equipped with text messaging capabilities. textD
 - twillio API (Python)
 - Flask
 
-Flask App deployed on Heroku
+Flask App deployed on Heroku.
 
 ### Usage
 
