@@ -1,5 +1,6 @@
 import urllib.request
 import json
+import re
 
 endpoint = 'https://maps.googleapis.com/maps/api/directions/json?'
 
@@ -31,6 +32,34 @@ def printInstructions():
     for x in range(len(directions)):
         result = result + '\n' + str(x+1) + '. ' + directions[x]
     print(result)
+
+def cleanhtml(raw_html):
+  cleanr = re.compile('<.*?>')
+  cleantext = re.sub(cleanr, '', raw_html)
+  return cleantext
+
+def charCount():
+    start = input('where are you: ').replace(' ','+')
+    end = input('where do you want to go: ').replace(' ','+')
+    api_key= input('key: ').replace(' ','+')
+    directions = sendInstructions(start, end, api_key)
+
+    isMultiple=False
+    output=[]
+    result = 'Hello! Here are your directions: '
+    for x in range(len(directions)):
+        result = result + '\n' + '#' + cleanhtml(directions[x])
+        if len(result)>1600:
+            isMultiple=True
+            pos = result.rfind('#',0,1601)
+            text = result[0:pos]
+            output.append(text)
+            result= result[pos:]
+
+    if not isMultiple:
+        output.append(result)
+
+    return output
 
 if __name__=="__main__":
     printInstructions()

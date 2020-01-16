@@ -24,9 +24,9 @@ def sms():
     result = 'Hello! Here are your directions: '
     for x in range(len(directions)):
         result = result + '\n' + '#' + cleanhtml(directions[x])
-        if len(result)>1600:
+        if len(result)>1560:
             isMultiple=True
-            pos = result.rfind('#',0,1601)
+            pos = result.rfind('#',0,1561)
             text = result[0:pos]
             resp.message(text)
             result= result[pos:]
