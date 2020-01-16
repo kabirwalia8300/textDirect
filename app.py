@@ -19,7 +19,7 @@ def sms():
     resp = MessagingResponse()
     querry_message = request.form['Body']
 
-    if querry_message.trim().equalsIgnoreCase('textDirect'):
+    if querry_message.strip().casefold()=='textdirect'):
         resp.message('Hello! Welcome to textDirect!'+' Please use the following '
         +'format to send your request: address of origin*address of destination*'
         +'language*mode of transport')
@@ -27,7 +27,7 @@ def sms():
 
     else:
         try:
-            querry_message.trim()
+            querry_message.strip()
             length = len(querry_message)
             assert querry_message.count('*')==3
             ind_1=querry_message.index('*')
