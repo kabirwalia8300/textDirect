@@ -22,6 +22,6 @@ startlocation endlocation
 ```
 
 You will then receive a reply within a few seconds with step by step instructions. 
-(Will soon add language and travel mode ability)
+
 
 
