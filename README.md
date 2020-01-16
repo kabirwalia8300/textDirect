@@ -11,7 +11,7 @@ However, most users have phones equipped with text messaging capabilities. textD
 - twillio API (Python)
 - Flask
 
-Flask App deployed on Heroku
+Flask App deployed on Heroku.
 
 ### Usage
 
@@ -21,4 +21,7 @@ Send a text message to the phone number: XXX-XXX-XXXX in the following format
 startlocation endlocation
 ```
 
-You will then receive a reply within a few seconds with step by step instructions.
+You will then receive a reply within a few seconds with step by step instructions. 
+
+
+
