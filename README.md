@@ -5,7 +5,7 @@ Large number of people in several countries cannot avail GPS technologies due to
 - Lack of financial resources to purchase smartphones with GPS applications like Google Maps.
 - Poor penetration of internet and mobile data services in the regions they reside in.
 
-However, most users have feature phones equipped with text messaging capabilities. TextDirect is an SMS-based navigation service that delivers step by step directions between two locations.
+However, most have feature phones equipped with text messaging capabilities. TextDirect is an SMS-based navigation service that delivers step by step directions between two locations.
 
 
 ### Dependencies
