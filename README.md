@@ -23,7 +23,7 @@ textdirect
 
 You will then be guided to send your directions request in specified format. Send it in and you will soon receive your direction. For example:
 
-![](images/screenshot.jpg | width=250)
+![](images/screenshot.jpg){:height="36px" width="36px"}
 
 
 
