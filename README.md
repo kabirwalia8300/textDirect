@@ -23,7 +23,7 @@ textdirect
 
 You will then be guided to send your directions request in specified format. Send it in and you will soon receive your direction. For example:
 
-<img src="" width="48">
+<img src="https://github.com/kabirwalia8300/TextDirect.git/images/screenshot.jpg" width="48">
 
 
 
