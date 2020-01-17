@@ -15,13 +15,13 @@ Flask App deployed on Heroku.
 
 ### Usage
 
-Send a text message to the phone number: XXX-XXX-XXXX in the following format
+Send the following message to (+1) 256-488-4302:
   
 ```
-startlocation endlocation
+textdirect
 ```
 
-You will then receive a reply within a few seconds with step by step instructions. 
+You will then be guided to send your directions request in specified format. Send it in and you will soon receive your direction.
 
 
 
