@@ -12,7 +12,7 @@ However, most have feature phones equipped with text messaging capabilities. Tex
 
 - ngrok (follow https://ngrok.com/download)
 - Google Directions API 
-- twillio API (Python)
+- Twillio API (Python)
 - Flask
 
 Flask App deployed on Heroku.
