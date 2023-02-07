@@ -4,7 +4,7 @@ certifi==2019.11.28
 cffi==1.13.2
 chardet==3.0.4
 Click==7.0
-cryptography==2.8
+cryptography==39.0.1
 d9t.json==0.4
 enum34==1.1.6
 Flask==1.0.3
